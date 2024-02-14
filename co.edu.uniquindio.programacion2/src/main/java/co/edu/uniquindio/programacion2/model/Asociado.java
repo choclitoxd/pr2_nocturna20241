@@ -1,21 +1,26 @@
 package co.edu.uniquindio.programacion2.model;
 
+import java.util.ArrayList;
+
 public class Asociado {
     private String nombre;
     private int numero_identificacion;
     private String email;
     private String numero_celular;
-
-    public Asociado() {
-    }
+    private ArrayList<Vehiculo> listaVehiculo;
 
     public Asociado(String nombre, int numero_identificacion, String email, String numero_celular) {
         this.nombre = nombre;
         this.numero_identificacion = numero_identificacion;
         this.email = email;
         this.numero_celular = numero_celular;
+        this.listaVehiculo = new ArrayList<>();
     }
 
+    public void addVehiculo(Vehiculo vehiculo){
+        this.listaVehiculo.add(vehiculo);
+        System.out.println("Melo"+ vehiculo.toString());
+    }
     public String getNombre() {
         return nombre;
     }
@@ -48,11 +53,22 @@ public class Asociado {
         this.numero_celular = numero_celular;
     }
 
+    public ArrayList<Vehiculo> getListaVehiculo() {
+        return listaVehiculo;
+    }
+
+    public void setListaVehiculo(ArrayList<Vehiculo> listaVehiculo) {
+        this.listaVehiculo = listaVehiculo;
+    }
+
     @Override
     public String toString() {
-        return "Asociado [nombre=" + nombre + ", numero_identificacion=" + numero_identificacion + ", email=" + email
-                + ", numero_celular=" + numero_celular + "]";
+        return "Asociado{" +
+                "nombre='" + nombre + '\'' +
+                ", numero_identificacion=" + numero_identificacion +
+                ", email='" + email + '\'' +
+                ", numero_celular='" + numero_celular + '\'' +
+                ", listaVehiculo=" + listaVehiculo +
+                '}';
     }
-    
-    
 }

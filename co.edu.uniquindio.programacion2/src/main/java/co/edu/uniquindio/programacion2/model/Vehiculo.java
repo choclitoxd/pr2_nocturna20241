@@ -1,6 +1,6 @@
 package co.edu.uniquindio.programacion2.model;
 
-public class Vehiculo {
+public abstract  class Vehiculo {
     private String placa;
     private String modelo;
     private String marca;

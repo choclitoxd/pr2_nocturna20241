@@ -1,9 +1,9 @@
 package co.edu.uniquindio.programacion2.model;
 
-public class Vehiculo_de_Pasajerosl extends Vehiculo{
+public class Vehiculo_de_Pasajeros extends Vehiculo{
     private int numero_maximo_pasajeros;
 
-    public Vehiculo_de_Pasajerosl(String placa, String modelo, String marca, String color,
+    public Vehiculo_de_Pasajeros(String placa, String modelo, String marca, String color,
             int numero_maximo_pasajeros) {
         super(placa, modelo, marca, color);
         this.numero_maximo_pasajeros = numero_maximo_pasajeros;
@@ -16,7 +16,6 @@ public class Vehiculo_de_Pasajerosl extends Vehiculo{
     public void setNumero_maximo_pasajeros(int numero_maximo_pasajeros) {
         this.numero_maximo_pasajeros = numero_maximo_pasajeros;
     }
-
     @Override
     public String toString() {
         return "Vehiculo_de_Pasajerosl [numero_maximo_pasajeros=" + numero_maximo_pasajeros + "]";
